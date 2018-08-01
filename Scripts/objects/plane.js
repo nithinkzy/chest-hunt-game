@@ -47,7 +47,7 @@ var objects;
                 this.y += 5;
             }
             if (objects.Game.keyboardManager.moveLeft) {
-                this.x -= 5;
+                this.x -= 10;
             }
             if (objects.Game.keyboardManager.moveRight) {
                 this.x += 5;
