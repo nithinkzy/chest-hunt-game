@@ -33,14 +33,14 @@ module scenes {
       public Start(): void {
         this._ocean = new objects.Ocean(this.assetManager);
         this._instructionLabel = new objects.Label("INSTRUCTIONS", "60px", "Consolas", "#FAEFFF", 320, 50, true);
-        this._moveup = new objects.Label("Moves up", "20px", "Consolas", "#FAEFFF", 290, 120, true);
-        this._movedown = new objects.Label("Moves down", "20px", "Consolas", "#FAEFFF", 290, 360, true);
-        this._moveleft = new objects.Label("Moves left", "20px", "Consolas", "#FAEFFF", 60, 280, true);
-        this._moveright = new objects.Label("Moves right", "20px", "Consolas", "#FAEFFF", 400, 280, true);
+        this._moveup = new objects.Label("1.Collect Teasure for points", "20px", "Consolas", "#FAEFFF", 450, 150, true);
+        this._movedown = new objects.Label("2.Avoid Crates", "20px", "Consolas", "#FAEFFF", 450, 180, true);
+        this._moveleft = new objects.Label("3.Kill Enemies to get to Boss", "20px", "Consolas", "#FAEFFF", 450, 210, true);
+        this._moveright = new objects.Label("4.Kill Boss to Win", "20px", "Consolas", "#FAEFFF", 450, 240, true);
 
         
         this._backButton = new objects.Button(this.assetManager, "backButton", 320, 430);
-        this._instructions = new objects.ArrowKeys(this.assetManager, "instructionKeys", 250, 250);
+        this._instructions = new objects.ArrowKeys(this.assetManager, "instructionKeys", 150, 250);
         this._scoreboard = new managers.ScoreBoard();
   
         this.Main();
