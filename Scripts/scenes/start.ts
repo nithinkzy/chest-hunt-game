@@ -22,7 +22,7 @@ module scenes {
     // Private Mathods
     private _startButtonClick():void {
 
-      objects.Game.currentScene = config.Scene.PLAY;
+      objects.Game.currentScene = config.Scene.LEVELS;
       
     }
     private _instructionButtonClick():void {

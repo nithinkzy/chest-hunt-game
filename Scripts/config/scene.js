@@ -6,6 +6,7 @@ var config;
         Scene[Scene["PLAY"] = 1] = "PLAY";
         Scene[Scene["OVER"] = 2] = "OVER";
         Scene[Scene["INSTRUCTION"] = 3] = "INSTRUCTION";
+        Scene[Scene["LEVELS"] = 4] = "LEVELS";
     })(Scene = config.Scene || (config.Scene = {}));
 })(config || (config = {}));
 //# sourceMappingURL=scene.js.map

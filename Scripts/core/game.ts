@@ -22,7 +22,10 @@
     {id: "exitButton", src:"./Assets/images/exitButton.png"},
     {id: "nextButton", src:"./Assets/images/nextButton.png"},
     {id: "backButton", src:"./Assets/images/backButton.png"},
-    {id: "playAgainButton", src:"./Assets/images/playAgainButton.png"},
+    {id: "levelOneButton", src:"./Assets/images/levelOneButton.png"},
+    {id: "levelTwoButton", src:"./Assets/images/levelTwoButton.png"},
+    {id: "freeRunButton", src:"./Assets/images/freeRunButton.png"},
+        {id: "playAgainButton", src:"./Assets/images/playAgainButton.png"},
     {id: "menuButton", src:"./Assets/images/menuButton.png"},
     {id: "restartButton", src:"./Assets/images/restartButton.png"},
     {id: "ocean", src:"./Assets/images/ocean.gif"},
@@ -88,6 +91,9 @@
       break;
       case config.Scene.INSTRUCTION:
         currentScene = new scenes.InstructionScene(assetManager);
+      break;
+      case config.Scene.LEVELS:
+        currentScene = new scenes.LevelScene(assetManager);
       break;
     }
 

@@ -3,6 +3,7 @@ module config {
     START,
     PLAY,
     OVER,
-    INSTRUCTION
+    INSTRUCTION,
+    LEVELS
   }
 }
