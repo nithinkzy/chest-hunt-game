@@ -31,6 +31,9 @@ var scenes;
             window.close();
         };
         // Public Methods
+        StartScene.prototype.stopMusic = function () {
+            this._gameTheme.stop();
+        };
         // Initialize Game Variables and objects
         StartScene.prototype.Start = function () {
             this._ocean = new objects.Ocean(this.assetManager);

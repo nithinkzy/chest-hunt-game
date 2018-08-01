@@ -27,6 +27,7 @@
         { id: "island", src: "./Assets/images/island.png" },
         { id: "cloud", src: "./Assets/images/cloud.png" },
         { id: "engine", src: "./Assets/audio/engine.ogg" },
+        { id: "theme", src: "./Assets/audio/theme.wav" },
         { id: "thunder", src: "./Assets/audio/thunder.wav" },
         { id: "yay", src: "./Assets/audio/yay.ogg" }
     ];

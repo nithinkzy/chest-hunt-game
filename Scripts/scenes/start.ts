@@ -7,6 +7,9 @@ module scenes {
     private _exitButton : objects.Button;
     private _ocean: objects.Ocean;
 
+
+    private _gameTheme: createjs.AbstractSoundInstance;
+
     // Public Properties
 
     // Constructor
@@ -18,11 +21,16 @@ module scenes {
 
     // Private Mathods
     private _startButtonClick():void {
+
       objects.Game.currentScene = config.Scene.PLAY;
+      
     }
     private _instructionButtonClick():void {
+
       console.log("INSTRUCTION Started...");
+      
       objects.Game.currentScene = config.Scene.INSTRUCTION;
+      
     }
     private _exitButtonClick():void {
       window.close();
@@ -30,6 +38,9 @@ module scenes {
 
 
     // Public Methods
+    public stopMusic():void{
+      this._gameTheme.stop();
+    }
 
     // Initialize Game Variables and objects
     public Start(): void {
@@ -39,7 +50,11 @@ module scenes {
       this._startButton = new objects.Button(this.assetManager, "startButton", 320, 220);
       this._instructionButton = new objects.Button(this.assetManager, "instructionButton", 320, 290);
       this._exitButton = new objects.Button(this.assetManager, "exitButton", 320, 360);
+    
       this.Main();
+
+
+      
     }
 
     public Update(): void {
