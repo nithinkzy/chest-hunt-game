@@ -1,3 +1,6 @@
+// NITHIN KUMAR KOLLERETHU SURESH 
+// 300991463
+// CHEST HUNT
 module objects {
     export class Label extends createjs.Text {
         // Private Instance Variables
