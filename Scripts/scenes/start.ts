@@ -3,6 +3,7 @@ module scenes {
     // Private Instance Variables
     private _welcomeLabel: objects.Label;
     private _startButton: objects.Button;
+    private _instructionButton : objects.Button;
     private _ocean: objects.Ocean;
 
     // Public Properties
@@ -26,8 +27,9 @@ module scenes {
     public Start(): void {
       this._ocean = new objects.Ocean(this.assetManager);
 
-      this._welcomeLabel = new objects.Label("Mail Pilot", "60px", "Consolas", "#FFFF00", 320, 240, true);
-      this._startButton = new objects.Button(this.assetManager, "startButton", 320, 340);
+      this._welcomeLabel = new objects.Label("Chest Hunt", "60px", "Consolas", "#FAEFFF", 320, 180, true);
+      this._startButton = new objects.Button(this.assetManager, "startButton", 320, 300);
+      this._instructionButton = new objects.Button(this.assetManager, "instructionButton", 320, 380);
       this.Main();
     }
 
@@ -45,6 +47,9 @@ module scenes {
 
       // add the startButton to the scene
       this.addChild(this._startButton);
+
+      // add the instructionButton to the scene
+      this.addChild(this._instructionButton);
 
       this._startButton.on("click", this._startButtonClick);
     }

@@ -27,8 +27,9 @@ var scenes;
         // Initialize Game Variables and objects
         StartScene.prototype.Start = function () {
             this._ocean = new objects.Ocean(this.assetManager);
-            this._welcomeLabel = new objects.Label("Mail Pilot", "60px", "Consolas", "#FFFF00", 320, 240, true);
-            this._startButton = new objects.Button(this.assetManager, "startButton", 320, 340);
+            this._welcomeLabel = new objects.Label("Chest Hunt", "60px", "Consolas", "#FAEFFF", 320, 180, true);
+            this._startButton = new objects.Button(this.assetManager, "startButton", 320, 300);
+            this._instructionButton = new objects.Button(this.assetManager, "instructionButton", 320, 380);
             this.Main();
         };
         StartScene.prototype.Update = function () {
@@ -42,6 +43,8 @@ var scenes;
             this.addChild(this._welcomeLabel);
             // add the startButton to the scene
             this.addChild(this._startButton);
+            // add the instructionButton to the scene
+            this.addChild(this._instructionButton);
             this._startButton.on("click", this._startButtonClick);
         };
         return StartScene;
