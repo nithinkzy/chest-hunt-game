@@ -15,6 +15,7 @@
         { id: "clickMeButton", src: "./Assets/images/clickMeButton.png" },
         { id: "startButton", src: "./Assets/images/startButton.png" },
         { id: "instructionButton", src: "./Assets/images/instructionButton.png" },
+        { id: "instructionKeys", src: "./Assets/images/arrowkeys.png" },
         { id: "exitButton", src: "./Assets/images/exitButton.png" },
         { id: "nextButton", src: "./Assets/images/nextButton.png" },
         { id: "backButton", src: "./Assets/images/backButton.png" },

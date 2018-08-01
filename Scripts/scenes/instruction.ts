@@ -1,8 +1,13 @@
 module scenes {
     export class InstructionScene extends objects.Scene {
       // Private Instance Variables
-      private _overLabel: objects.Label;
-      private _restartButton: objects.Button;
+      private _instructionLabel: objects.Label;
+      private _moveup: objects.Label;
+      private _moveleft: objects.Label;
+      private _moveright: objects.Label;
+      private _movedown: objects.Label;
+      private _instructions: objects.ArrowKeys;
+      private _backButton: objects.Button;
       private _ocean: objects.Ocean;
   
       private _scoreboard: managers.ScoreBoard;
@@ -17,8 +22,8 @@ module scenes {
       }
   
       // Private Mathods
-      private _restartButtonClick():void {
-        objects.Game.currentScene = config.Scene.PLAY;
+      private _backButtonClick():void {
+        objects.Game.currentScene = config.Scene.START;
       }
   
   
@@ -27,8 +32,15 @@ module scenes {
       // Initialize Game Variables and objects
       public Start(): void {
         this._ocean = new objects.Ocean(this.assetManager);
-        this._overLabel = new objects.Label("Game Over", "60px", "Consolas", "#FFFF00", 320, 140, true);
-        this._restartButton = new objects.Button(this.assetManager, "restartButton", 320, 340);
+        this._instructionLabel = new objects.Label("INSTRUCTIONS", "60px", "Consolas", "#FAEFFF", 320, 50, true);
+        this._moveup = new objects.Label("Moves up", "20px", "Consolas", "#FAEFFF", 290, 120, true);
+        this._movedown = new objects.Label("Moves down", "20px", "Consolas", "#FAEFFF", 290, 360, true);
+        this._moveleft = new objects.Label("Moves left", "20px", "Consolas", "#FAEFFF", 60, 280, true);
+        this._moveright = new objects.Label("Moves right", "20px", "Consolas", "#FAEFFF", 400, 280, true);
+
+        
+        this._backButton = new objects.Button(this.assetManager, "backButton", 320, 430);
+        this._instructions = new objects.ArrowKeys(this.assetManager, "instructionKeys", 250, 250);
         this._scoreboard = new managers.ScoreBoard();
   
         this.Main();
@@ -44,17 +56,24 @@ module scenes {
         this.addChild(this._ocean);
   
         // add the welcome label to the scene
-        this.addChild(this._overLabel);
+        this.addChild(this._instructionLabel);
   
         // add the backButton to the scene
-        this.addChild(this._restartButton);
+        this.addChild(this._backButton);
   
-        // add scoreboard to the scene
-        this.addChild(this._scoreboard.HighScoreLabel);
-        this._scoreboard.HighScore = objects.Game.HighScore;
+         // add the arrow keys  to the scene
+         this.addChild(this._instructions);
+
+          // add the arrow keys  to the scene
+          this.addChild(this._movedown);
+          this.addChild(this._moveleft);
+          this.addChild(this._moveright);
+          this.addChild(this._moveup);
+
+      
   
         // event listeners
-        this._restartButton.on("click", this._restartButtonClick);
+        this._backButton.on("click", this._backButtonClick);
       }
     }
   }

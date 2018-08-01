@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CentennialCollege/COMP397-W2018-MailPilotDemo-B.git"
+    "url": "git+https://github.com/nithinkzy/COMP397-Web-Game-Programming---Assignmnet-2.git"
   },
-  "author": "Tom Tsiliopoulos <tsiliopoulos@hotmail.com>",
+  "author": "Nithin Kumar Kollerethu Suresh <nkollere@my.centennialcollege.ca>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CentennialCollege/COMP397-W2018-MailPilotDemo-B/issues"
+    "url": "https://github.com/nithinkzy/COMP397-Web-Game-Programming---Assignmnet-2.git"
   },
-  "homepage": "https://github.com/CentennialCollege/COMP397-W2018-MailPilotDemo-B#readme",
+  "homepage": "https://github.com/nithinkzy/COMP397-Web-Game-Programming---Assignmnet-2.git",
   "devDependencies": {
     "@types/easeljs": "^1.0.0"
   },
