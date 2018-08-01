@@ -22,6 +22,8 @@
     {id: "exitButton", src:"./Assets/images/exitButton.png"},
     {id: "nextButton", src:"./Assets/images/nextButton.png"},
     {id: "backButton", src:"./Assets/images/backButton.png"},
+    {id: "playAgainButton", src:"./Assets/images/playAgainButton.png"},
+    {id: "menuButton", src:"./Assets/images/menuButton.png"},
     {id: "restartButton", src:"./Assets/images/restartButton.png"},
     {id: "ocean", src:"./Assets/images/ocean.gif"},
     {id: "plane", src:"./Assets/images/plane.png"},

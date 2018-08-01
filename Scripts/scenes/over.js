@@ -20,15 +20,19 @@ var scenes;
             return _this;
         }
         // Private Mathods
-        OverScene.prototype._restartButtonClick = function () {
+        OverScene.prototype._playAgainButtonClick = function () {
             objects.Game.currentScene = config.Scene.PLAY;
+        };
+        OverScene.prototype._menuButtonClick = function () {
+            objects.Game.currentScene = config.Scene.START;
         };
         // Public Methods
         // Initialize Game Variables and objects
         OverScene.prototype.Start = function () {
             this._ocean = new objects.Ocean(this.assetManager);
-            this._overLabel = new objects.Label("Game Over", "60px", "Consolas", "#FFFF00", 320, 140, true);
-            this._restartButton = new objects.Button(this.assetManager, "restartButton", 320, 340);
+            this._overLabel = new objects.Label("Game Over", "60px", "Consolas", "#FAEFFF", 320, 60, true);
+            this._playAgainButton = new objects.Button(this.assetManager, "playAgainButton", 320, 290);
+            this._menuButton = new objects.Button(this.assetManager, "menuButton", 320, 360);
             this._scoreboard = new managers.ScoreBoard();
             this.Main();
         };
@@ -41,13 +45,16 @@ var scenes;
             this.addChild(this._ocean);
             // add the welcome label to the scene
             this.addChild(this._overLabel);
-            // add the backButton to the scene
-            this.addChild(this._restartButton);
+            // add the play again button to the scene
+            this.addChild(this._playAgainButton);
+            // add the menu button to the scene
+            this.addChild(this._menuButton);
             // add scoreboard to the scene
             this.addChild(this._scoreboard.HighScoreLabel);
             this._scoreboard.HighScore = objects.Game.HighScore;
             // event listeners
-            this._restartButton.on("click", this._restartButtonClick);
+            this._playAgainButton.on("click", this._playAgainButtonClick);
+            this._menuButton.on("click", this._menuButtonClick);
         };
         return OverScene;
     }(objects.Scene));
