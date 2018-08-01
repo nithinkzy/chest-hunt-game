@@ -27,10 +27,10 @@ var scenes;
             objects.Game.currentScene = config.Scene.PLAY;
         };
         LevelScene.prototype._levelTwoButtonClick = function () {
-            objects.Game.currentScene = config.Scene.PLAY;
+            objects.Game.currentScene = config.Scene.LEVELTWO;
         };
         LevelScene.prototype._freeRunButtonClick = function () {
-            objects.Game.currentScene = config.Scene.PLAY;
+            objects.Game.currentScene = config.Scene.FREERUN;
         };
         // Public Methods
         LevelScene.prototype.stopMusic = function () {

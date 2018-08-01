@@ -82,6 +82,12 @@
             case config.Scene.LEVELS:
                 currentScene = new scenes.LevelScene(assetManager);
                 break;
+            case config.Scene.LEVELTWO:
+                currentScene = new scenes.levelTwoScene(assetManager);
+                break;
+            case config.Scene.FREERUN:
+                currentScene = new scenes.FreeRun(assetManager);
+                break;
         }
         currentState = objects.Game.currentScene;
         stage.addChild(currentScene);

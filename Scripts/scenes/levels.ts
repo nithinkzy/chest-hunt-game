@@ -34,12 +34,12 @@ module scenes {
       private _levelTwoButtonClick():void {
   
             
-        objects.Game.currentScene = config.Scene.PLAY;
+        objects.Game.currentScene = config.Scene.LEVELTWO;
 
          
     }
       private _freeRunButtonClick():void {
-        objects.Game.currentScene = config.Scene.PLAY;
+        objects.Game.currentScene = config.Scene.FREERUN;
       }
   
   

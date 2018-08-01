@@ -4,6 +4,8 @@ module config {
     PLAY,
     OVER,
     INSTRUCTION,
-    LEVELS
+    LEVELS,
+    LEVELTWO,
+    FREERUN
   }
 }

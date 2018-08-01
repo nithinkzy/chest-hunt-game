@@ -33,7 +33,7 @@ module scenes {
       public Start(): void {
         this._ocean = new objects.Ocean(this.assetManager);
         this._instructionLabel = new objects.Label("INSTRUCTIONS", "60px", "Consolas", "#FAEFFF", 320, 50, true);
-        this._moveup = new objects.Label("1.Collect Teasure for points", "20px", "Consolas", "#FAEFFF", 450, 150, true);
+        this._moveup = new objects.Label("1.Collect chest for points", "20px", "Consolas", "#FAEFFF", 450, 150, true);
         this._movedown = new objects.Label("2.Avoid Crates", "20px", "Consolas", "#FAEFFF", 450, 180, true);
         this._moveleft = new objects.Label("3.Kill Enemies to get to Boss", "20px", "Consolas", "#FAEFFF", 450, 210, true);
         this._moveright = new objects.Label("4.Kill Boss to Win", "20px", "Consolas", "#FAEFFF", 450, 240, true);
