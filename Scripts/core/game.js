@@ -15,6 +15,7 @@
         { id: "clickMeButton", src: "./Assets/images/clickMeButton.png" },
         { id: "startButton", src: "./Assets/images/startButton.png" },
         { id: "instructionButton", src: "./Assets/images/instructionButton.png" },
+        { id: "exitButton", src: "./Assets/images/exitButton.png" },
         { id: "nextButton", src: "./Assets/images/nextButton.png" },
         { id: "backButton", src: "./Assets/images/backButton.png" },
         { id: "restartButton", src: "./Assets/images/restartButton.png" },
@@ -67,6 +68,9 @@
                 break;
             case config.Scene.OVER:
                 currentScene = new scenes.OverScene(assetManager);
+                break;
+            case config.Scene.INSTRUCTION:
+                currentScene = new scenes.InstructionScene(assetManager);
                 break;
         }
         currentState = objects.Game.currentScene;

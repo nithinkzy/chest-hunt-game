@@ -23,13 +23,21 @@ var scenes;
         StartScene.prototype._startButtonClick = function () {
             objects.Game.currentScene = config.Scene.PLAY;
         };
+        StartScene.prototype._instructionButtonClick = function () {
+            console.log("INSTRUCTION Started...");
+            objects.Game.currentScene = config.Scene.INSTRUCTION;
+        };
+        StartScene.prototype._exitButtonClick = function () {
+            window.close();
+        };
         // Public Methods
         // Initialize Game Variables and objects
         StartScene.prototype.Start = function () {
             this._ocean = new objects.Ocean(this.assetManager);
-            this._welcomeLabel = new objects.Label("Chest Hunt", "60px", "Consolas", "#FAEFFF", 320, 180, true);
-            this._startButton = new objects.Button(this.assetManager, "startButton", 320, 300);
-            this._instructionButton = new objects.Button(this.assetManager, "instructionButton", 320, 380);
+            this._welcomeLabel = new objects.Label("Chest Hunt", "60px", "Consolas", "#FAEFFF", 320, 120, true);
+            this._startButton = new objects.Button(this.assetManager, "startButton", 320, 220);
+            this._instructionButton = new objects.Button(this.assetManager, "instructionButton", 320, 290);
+            this._exitButton = new objects.Button(this.assetManager, "exitButton", 320, 360);
             this.Main();
         };
         StartScene.prototype.Update = function () {
@@ -45,7 +53,11 @@ var scenes;
             this.addChild(this._startButton);
             // add the instructionButton to the scene
             this.addChild(this._instructionButton);
+            // add the exit Button to the scene
+            this.addChild(this._exitButton);
             this._startButton.on("click", this._startButtonClick);
+            this._instructionButton.on("click", this._instructionButtonClick);
+            this._exitButton.on("click", this._exitButtonClick);
         };
         return StartScene;
     }(objects.Scene));

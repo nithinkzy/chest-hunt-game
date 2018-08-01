@@ -4,6 +4,7 @@ module scenes {
     private _welcomeLabel: objects.Label;
     private _startButton: objects.Button;
     private _instructionButton : objects.Button;
+    private _exitButton : objects.Button;
     private _ocean: objects.Ocean;
 
     // Public Properties
@@ -19,6 +20,13 @@ module scenes {
     private _startButtonClick():void {
       objects.Game.currentScene = config.Scene.PLAY;
     }
+    private _instructionButtonClick():void {
+      console.log("INSTRUCTION Started...");
+      objects.Game.currentScene = config.Scene.INSTRUCTION;
+    }
+    private _exitButtonClick():void {
+      window.close();
+    }
 
 
     // Public Methods
@@ -27,9 +35,10 @@ module scenes {
     public Start(): void {
       this._ocean = new objects.Ocean(this.assetManager);
 
-      this._welcomeLabel = new objects.Label("Chest Hunt", "60px", "Consolas", "#FAEFFF", 320, 180, true);
-      this._startButton = new objects.Button(this.assetManager, "startButton", 320, 300);
-      this._instructionButton = new objects.Button(this.assetManager, "instructionButton", 320, 380);
+      this._welcomeLabel = new objects.Label("Chest Hunt", "60px", "Consolas", "#FAEFFF", 320, 120, true);
+      this._startButton = new objects.Button(this.assetManager, "startButton", 320, 220);
+      this._instructionButton = new objects.Button(this.assetManager, "instructionButton", 320, 290);
+      this._exitButton = new objects.Button(this.assetManager, "exitButton", 320, 360);
       this.Main();
     }
 
@@ -51,7 +60,13 @@ module scenes {
       // add the instructionButton to the scene
       this.addChild(this._instructionButton);
 
+      // add the exit Button to the scene
+      this.addChild(this._exitButton);
+
       this._startButton.on("click", this._startButtonClick);
+      this._instructionButton.on("click", this._instructionButtonClick);
+      this._exitButton.on("click", this._exitButtonClick);
+
     }
   }
 }
